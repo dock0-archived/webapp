@@ -1,0 +1,8 @@
+#!/bin/sh
+
+mkdir -p /etc/nginx/sites
+cp /etc/nginx/sites-available/http.conf /etc/nginx/sites/http.conf
+[[ -e /opt/ssl/key ]] && cp /etc/nginx/sites-available/https.conf /etc/nginx/sites/https.conf
+
+exec /usr/bin/nginx 2>&1
+
