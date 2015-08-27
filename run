@@ -1,8 +1,12 @@
 #!/bin/sh
 
 mkdir -p /etc/nginx/sites
-cp /etc/nginx/sites-available/http.conf /etc/nginx/sites/http.conf
-[[ -e /opt/ssl/key ]] && cp /etc/nginx/sites-available/https.conf /etc/nginx/sites/https.conf
+if [[ -e /opt/ssl/key ]] ; then
+    cp /etc/nginx/sites-available/redirect.conf /etc/nginx/sites/redirect.conf
+    cp /etc/nginx/sites-available/https.conf /etc/nginx/sites/https.conf
+else
+    cp /etc/nginx/sites-available/http.conf /etc/nginx/sites/http.conf
+fi
 
 exec /usr/bin/nginx 2>&1
 
