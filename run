@@ -8,5 +8,7 @@ else
     cp /etc/nginx/sites-available/http.conf /etc/nginx/sites/http.conf
 fi
 
+sed -i "s/HTTP_PORT/$HTTP_PORT/g;s/HTTPS_PORT/$HTTPS_PORT/g" /etc/nginx/sites-enabled/*
+
 exec /usr/bin/nginx 2>&1
 
