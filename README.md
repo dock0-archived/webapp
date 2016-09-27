@@ -2,7 +2,7 @@ dock0/webapp
 =======
 
 [![Automated Build](http://img.shields.io/badge/automated-build-green.svg)](https://hub.docker.com/r/dock0/webapp/)
-[![Build Status](https://img.shields.io/circleci/project/dock0/webapp.svg)](https://circleci.com/gh/dock0/webapp)
+[![Build Status](https://img.shields.io/circleci/project/dock0/webapp/master.svg)](https://circleci.com/gh/dock0/webapp)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 Container based on [dock0/foreman](https://github.com/dock0/foreman) that adds nginx as a reverse proxy to a webapp
